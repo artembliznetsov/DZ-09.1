@@ -7,3 +7,9 @@
       apt:
         name: nginx
 
+    - name:
+      lineinfile:
+        path: "/var/www/html/index.html"
+        line: "<p><script> document.write(new Date().toLocaleDateString()); </script></p>"
+        state: present
+        insertafter: "<h1>Welcome to nginx!</h1>"
