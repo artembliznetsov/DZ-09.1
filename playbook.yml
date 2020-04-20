@@ -1,0 +1,10 @@
+---
+
+- hosts:
+    - web
+  become: yes
+  tasks:
+    - name: Nginx
+      atp:
+        name: nginx
+        
